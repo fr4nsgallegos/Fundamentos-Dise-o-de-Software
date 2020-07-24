@@ -1,0 +1,96 @@
+2020-07-23 22:04:00 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tienda.cateogria' doesn't exist in C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'cateogria', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('cateogria', Array)
+#2 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('cateogria')
+#3 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'cateogria', 'Cateogria')
+#7 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Cateogria')
+#8 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Cateogria')
+#9 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Cateogria', 0)
+#10 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('cateogria')
+#12 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tienda.cateogria' doesn't exist in C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'cateogria', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('cateogria', Array)
+#10 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('cateogria')
+#11 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'cateogria', 'Cateogria')
+#15 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Cateogria')
+#16 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Cateogria')
+#17 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Cateogria', 0)
+#18 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('cateogria')
+#20 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\xampp\htdocs\final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2020-07-23 22:04:03 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tienda.cateogoria' doesn't exist in C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'cateogoria', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('cateogoria', Array)
+#2 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('cateogoria')
+#3 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'cateogoria', 'Cateogoria')
+#7 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Cateogoria')
+#8 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Cateogoria')
+#9 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Cateogoria', 0)
+#10 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('cateogoria')
+#12 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tienda.cateogoria' doesn't exist in C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'cateogoria', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('cateogoria', Array)
+#10 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('cateogoria')
+#11 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'cateogoria', 'Cateogoria')
+#15 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Cateogoria')
+#16 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Cateogoria')
+#17 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Cateogoria', 0)
+#18 C:\xampp\htdocs\final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('cateogoria')
+#20 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\xampp\htdocs\final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\xampp\htdocs\final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
